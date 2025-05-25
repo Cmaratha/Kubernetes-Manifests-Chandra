@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: flower-app-deployment
 spec: #Defines the Deployment Behaviour
-  replices: 3
+  replicas: 3
   selector:
     matchLabels:
       app: web
@@ -21,6 +21,6 @@ spec: #Defines the Deployment Behaviour
             cpu: "100m"
           requests:
             memory: "128Mi"
-            cpu: "500m"
+            cpu: "50m"
         ports:
         - containerPort: 3015
