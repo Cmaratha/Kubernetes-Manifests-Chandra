@@ -27,13 +27,13 @@ spec: #Defines the Deployment Behaviour
 ---
 # Writing Service.yml file to expose the Application
 apiVersion: v1
-kind: service
+kind: Service
 metadata:
-  name: chandra-flower-app-svc
+  name: chandra-app-svc 
 spec:
   selector:
     app: chandra
   ports:
-  - port: 3016 # Service Port
-    targetPort: 3015 # Container Port
+  - port: 3016
+    targetPort: 3016
   type: LoadBalancer
