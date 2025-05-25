@@ -35,5 +35,5 @@ spec:
     app: chandra
   ports:
   - port: 3016
-    targetPort: 3016
+    targetPort: 3015
   type: LoadBalancer
