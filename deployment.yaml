@@ -6,11 +6,11 @@ spec: #Defines the Deployment Behaviour
   replicas: 3
   selector:
     matchLabels:
-      app: web
+      app: chandra
   template:
     metadata:
       labels:
-        app: web
+        app: chandra
     spec: #Defines the Pod Behaviour
       containers:
       - name: cart-app
@@ -24,3 +24,16 @@ spec: #Defines the Deployment Behaviour
             cpu: "50m"
         ports:
         - containerPort: 3015
+---
+# Writing Service.yml file to expose the Application
+apiVersion: apps/v1
+kind: Service
+metadata:
+  name: chandra-flower-app-svc
+spec:
+  selector:
+    app: chandra
+  ports:
+  - port: 3016 # Service Port
+    targetPort: 3015 # Container Port
+  type: LoadBalancer
