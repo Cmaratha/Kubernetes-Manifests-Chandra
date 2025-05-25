@@ -20,7 +20,7 @@ spec: #Defines the Deployment Behaviour
             memory: "250Mi"
             cpu: "100m"
           requests:
-            memory: "128MB"
+            memory: "128Mi"
             cpu: "500m"
         ports:
         - containerPort: 3015
