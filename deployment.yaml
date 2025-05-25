@@ -26,8 +26,8 @@ spec: #Defines the Deployment Behaviour
         - containerPort: 3015
 ---
 # Writing Service.yml file to expose the Application
-apiVersion: apps/v1
-kind: Service
+apiVersion: v1
+kind: service
 metadata:
   name: chandra-flower-app-svc
 spec:
